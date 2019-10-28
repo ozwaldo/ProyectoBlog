@@ -13,6 +13,7 @@ header {
             to right bottom, 
             rgba(94, 207, 109, 0.589), 
             rgba(98, 127, 224, 0.596)), 
-        url(../img/bakground-jumbo.jpg);
+        url(../img/bg-jumbotron.jpg);
     background-size: cover;
+    background-position: center;
 }

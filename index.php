@@ -52,10 +52,10 @@
         </div> <!-- /jumbotron -->
         <div class="row mb-2">
         <div class="col-md-6">
-                <div class="card text-white" >
-                    <img src="img/bakground-jumbo.jpg" class="card-img-top" alt="...">
+                <div class="card text-white card-block d-flex" >
+                    <img src="img/bg-card-1.jpg" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
-                        <div class="card-body">
+                        <div class="card-body align-items-center my-auto">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -66,7 +66,7 @@
            
             <div class="col-md-6">
                 <div class="card text-white" >
-                    <img src="img/bakground-jumbo.jpg" class="card-img-top" alt="...">
+                    <img src="img/bg-jumbotron.jpg" class="card-img-top" alt="...">
                     <div class="card-img-overlay">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
