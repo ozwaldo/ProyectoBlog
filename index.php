@@ -31,13 +31,53 @@
                 <a href="#" class="p-2 text-muted">Categoria 3</a>
             </nav>
         </div>
-        <div class="jumbotron text-white p-md-5 rounded">
+        <div class="jumbotron text-white p-m- rounded">
             <div class="col-md-6">
-                <h1 class="display-4 font-italic">Título</h1>
-                <p class="lead my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptates earum perferendis tenetur dignissimos officia illum. Quae ab fugiat, ex rem maxime tempore dicta commodi. </p>
-                <p class="lead mb-0"><a href="#" class="text-white">Leer más</a></p>
+                <h1 class="display-4">
+                    Título
+                </h1>
+                <p class="my-3">
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit. 
+                    Illo deleniti quibusdam et itaque, 
+                    tempora, similique molestias saepe maxime 
+                    officiis vel beatae, cumque alias ea 
+                    nostrum corporis distinctio sequi 
+                    blanditiis optio.
+                </p>
+                <p class="mb-0">
+                    <a href="#" class="text-white">Leer más</a>
+                </p>
+            </div>                    
+        </div> <!-- /jumbotron -->
+        <div class="row mb-2">
+        <div class="col-md-6">
+                <div class="card text-white" >
+                    <img src="img/bakground-jumbo.jpg" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-6">
+                <div class="card text-white" >
+                    <img src="img/bakground-jumbo.jpg" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div> <!-- /container -->
+    
 </body>
 </html>
