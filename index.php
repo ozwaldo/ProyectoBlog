@@ -31,7 +31,13 @@
                 <a href="#" class="p-2 text-muted">Categoria 3</a>
             </nav>
         </div>
-    
+        <div class="jumbotron text-white p-md-5 rounded">
+            <div class="col-md-6">
+                <h1 class="display-4 font-italic">Título</h1>
+                <p class="lead my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptates earum perferendis tenetur dignissimos officia illum. Quae ab fugiat, ex rem maxime tempore dicta commodi. </p>
+                <p class="lead mb-0"><a href="#" class="text-white">Leer más</a></p>
+            </div>
+        </div>
     </div> <!-- /container -->
 </body>
 </html>
