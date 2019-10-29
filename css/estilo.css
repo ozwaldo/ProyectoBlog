@@ -19,6 +19,7 @@ header {
   background-position: center;
 }
 
+
 .card-body {
   background-image: linear-gradient(
     rgba(252, 252, 252, 0.1),
@@ -28,24 +29,23 @@ header {
 
 .blog-footer {
   padding: 2.5rem 0;
-  color: #999;
-  background-color: black;
+  color: #f3f3f3;
+  background-color: #4b4b4b;
   border-top: 0.05rem solid #e5e5e5;
 }
-.blog-footer p:last-child {
+/* .blog-footer p:last-child {
   margin-bottom: 0;
-}
+} */
 
 ul.social-network {
   list-style: none;
   display: inline;
-  margin-left: 0 !important;
-  padding: 0;
 }
 
 ul.social-network li {
   display: inline;
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .social-network a.icoFacebook:hover {
