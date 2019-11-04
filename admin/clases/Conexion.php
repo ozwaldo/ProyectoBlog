@@ -1,16 +1,23 @@
 <?php
-require("dbconfig.php");
+require("config_bd.php");
 
 class Conexion {
-    public static function con($bd) {
-        //Establecemos la conexion con el servidor de Mysql
-        $conex = mysqli_connect('localhost', 'root', 'rootroot');
-        //Indicar que vamos a utilizar la codificacion utf8
-        mysqli_query($conex,"SET NAMES 'utf8'");
-        //Seleccionar la base de datos a utilizar
-        mysqli_select_db($conex,$bd);
+    public static function con() {
+        $conex = mysqli_connect(DB_HOST, DB_USUARIO, DB_PASSWORD,DB_NOMBRE);
+
+        // if(!$conex) {
+        //     echo "Conexión no realizada. Error: " . 
+        //             mysqli_connect_error();    
+            
+                           
+        // } else {
+        //     echo "Conexión realizada con la base de datos " 
+        //             . DB_NOMBRE;
+                    
+        // }
         return $conex;
     }
 }
 
+Conexion::con();
 ?>

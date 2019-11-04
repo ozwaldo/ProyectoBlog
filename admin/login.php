@@ -1,7 +1,23 @@
+<?php
+session_start();
+require_once 'clases/Login.php';
+if (isset($_SESSION['usuario_admin'])) {
+    header('Location: index.php');
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $login = new Login();
+   // echo "login";
+    $mensaje = $login->
+            ingresar();
+}
+?>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- ---- Include the above in your HEAD tag -------- -->
+
+
 
 <!DOCTYPE html>
 <html>
@@ -30,18 +46,18 @@
                     <h3>Blog</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="login.php" method="post"> 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="usuario">
+                            <input type="text" class="form-control" name="usuario" placeholder="usuario">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="contraseña">
+                            <input type="password" class="form-control" name="password" placeholder="contraseña">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Login" class="btn float-right login_btn">
