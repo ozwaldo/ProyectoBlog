@@ -6,24 +6,25 @@ class Login {
 
     public function verificarUsuario() {
         if (!isset($_SESSION['usuario_Admin'])) {
-            //echo WEB_ROOT;
+            
             header('Location: login.php');
             exit();
         }
     }
 
     public function ingresar() {
-        $usuario_Admin = $_POST['usuario'];
+        $usuario_admin = $_POST['usuario'];
         $pass = $_POST['password'];
 
         $control = new Controlador();
-        $row = $control->get_rows('id_usuario', 'usuarios', "email= '$usuario_Admin' AND password = '$pass'");
+        $row = $control->get_rows('id_usuario, nombre', 'usuarios', "email= '$usuario_admin' AND password = '$pass'");
         //print_r($row);
         if ($rows = $row->getSiguienteRegistro()) {
-            //echo $rows['adm_Clave'];
-            $_SESSION['adm_Clave'] = $rows['adm_Clave'];
-            $post['adm_Clave'] = $rows['adm_Clave'];
-            $post['adm_Last_Login'] = date('Y/m/j G:i:s');
+            //print_r($rows);
+            $_SESSION['adm_Clave'] = $rows['id_usuario'];
+            $_SESSION['nombre'] = $rows['nombre'];
+            $post['adm_Clave'] = $rows['id_usuario'];
+            //$post['adm_Last_Login'] = date('Y/m/j G:i:s');
 
             $_SESSION['usuario_admin'] = $_POST['usuario'];
             $_SESSION['ingreso'] = time();

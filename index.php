@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require("template/header.php"); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog de Tecnología</title>
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-
-
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <div class="row d-flex align-items-center">
-                <div class="col-4"></div>
-                <div class="col-4 text-center">
-                    <a href="#" class="blog-logo">
-                        Blog
-                    </a>
-                </div>
-                <div class="col-4"></div>
-            </div>
-        </header>
-        <div class="nav-blog">
-            <nav class="nav d-flex justify-content-between">
-                <a href="#" class="p-2 text-muted">Inicio</a>
-                <a href="#" class="p-2 text-muted">Categoria 1</a>
-                <a href="#" class="p-2 text-muted">Categoria 2</a>
-                <a href="#" class="p-2 text-muted">Categoria 3</a>
-            </nav>
-        </div>
-        <div class="jumbotron text-white p-m- rounded">
+        <div class="jumbotron text-white p-m- rounded" style="background-image:linear-gradient(to right bottom, rgba(94, 207, 109, 0.589), rgba(98, 127, 224, 0.596)),url('img/bg-jumbotron.jpg') ">
             <div class="col-md-6">
                 <h1 class="display-4">
                     Título
@@ -157,18 +122,5 @@
             </div>
         </div>
     </div> <!-- /container -->
-    <footer class="blog-footer mt-5">
-        <div class="container text-center">
-            <ul class="social-network social-circle">
-                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright text-center py-3">
-            Todos los derechos Reservados - 2019
-        </div>
-    </footer>
-</body>
 
-</html>
+<?php require("template/footer.php") ?>

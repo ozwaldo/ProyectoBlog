@@ -4,17 +4,8 @@ require_once 'clases/Login.php';
 if (isset($_SESSION['usuario_admin'])) {
     header('Location: index.php');
 }
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $login = new Login();
-   // echo "login";
-    $mensaje = $login->
-            ingresar();
-}
+ob_start();
 ?>
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- ---- Include the above in your HEAD tag -------- -->
 
 
@@ -27,24 +18,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!--Made with love by Mutiullah Samim -->
 
     <!--Bootsrap 4 CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.css">
 
     <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/all.css">
 
     <!--Custom styles-->
-    <link rel="stylesheet" href="css/estiloadmin.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="login">
+    <div class="container login-form">
         <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-login">
+                <div class="card-header text-center">
                     <h3>Blog</h3>
                 </div>
+                <?php 
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $login = new Login();
+                    // echo "login";
+                        $mensaje = $login->
+                                ingresar();
+                    }
+                ?>
                 <div class="card-body">
                     <form action="login.php" method="post"> 
                         <div class="input-group form-group">
@@ -60,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input type="password" class="form-control" name="password" placeholder="contraseña">
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <input type="submit" value="Entrar" class="btn btn-primary btn-block">
                         </div>
                     </form>
                 </div>
