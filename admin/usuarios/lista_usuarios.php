@@ -1,5 +1,8 @@
 <?php 
+    DEFINE("USUARIOS","active");
     require_once("../template-admin/header.php");
+    
+
 ?>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">

@@ -1,6 +1,7 @@
 <?php 
     session_start();
     require('clases/Login.php');
+    DEFINE("ADMINISTRADOR","active");
     if(!isset($_SESSION['usuario_admin'])) {
         header('Location: login.php');
     }

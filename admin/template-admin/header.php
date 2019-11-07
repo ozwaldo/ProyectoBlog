@@ -31,21 +31,21 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/index.php">
+                            <a class="nav-link <?php if(defined('ADMINISTRADOR')){ echo ADMINISTRADOR; } ?>" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/index.php">
                                 <span data-feather="home"></span>
-                                Administrador <span class="sr-only">(current)</span>
+                                Administrador <span class="sr-only"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/usuarios/lista_usuarios.php">
+                            <a class="nav-link <?php if(defined('USUARIOS')){ echo USUARIOS; } ?>" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/usuarios/lista_usuarios.php">
                                 <span data-feather="file"></span>
-                                Usuarios
+                                Usuarios <span class="sr-only"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/posts/lista_posts.php">
+                            <a class="nav-link <?php if(defined('POSTS')){ echo POSTS; } ?>" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>admin/posts/lista_posts.php">
                                 <span data-feather="shopping-cart"></span>
-                                Posts
+                                Posts <span class="sr-only"></span>
                             </a>
                         </li>
                         <li class="nav-item">

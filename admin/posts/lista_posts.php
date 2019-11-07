@@ -1,4 +1,5 @@
 <?php 
+    DEFINE("POSTS","active");
     require_once("../template-admin/header.php");
 ?>
 
