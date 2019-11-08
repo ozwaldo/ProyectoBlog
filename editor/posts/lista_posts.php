@@ -1,22 +1,20 @@
 <?php 
-    DEFINE("USUARIOS","active");
-    require_once("../template-admin/header.php");
-    
-
+    DEFINE("POSTS","active");
+    require_once("../template-editor/header.php");
 ?>
+
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <h2>Usuarios</h2>
-    <a href="addUsuario.php" class="btn btn-primary my-3 ">Agregar Usuario</a>
+    <h2>Posts</h2>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Paterno</th>
-                    <th>Email</th>
-                    <th>Información</th>
-                    <th>Tipo</th>
+                    <th>Título</th>
+                    <th>Fecha</th>
+                    <th>Categoría</th>
+                    <th>Autor</th>
+                    <th>Contenido</th>
+                    <th>Imagen</th>
                     <th>Estado</th>
 
                 </tr>

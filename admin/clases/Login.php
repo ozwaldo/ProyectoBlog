@@ -5,10 +5,8 @@ include 'Controlador.php';
 class Login {
 
     public function verificarUsuario() {
-        if (!isset($_SESSION['usuario_Admin'])) {
-            
-            header('Location: login.php');
-            exit();
+        if (!isset($_SESSION['usuario_admin']) || $_SESSION['tipo'] != "0") {            
+            return "error";
         }
     }
 
@@ -17,22 +15,28 @@ class Login {
         $pass = $_POST['password'];
 
         $control = new Controlador();
-        $row = $control->get_rows('id_usuario, nombre', 'usuarios', "email= '$usuario_admin' AND password = '$pass'");
+        $row = $control->get_rows('id_usuario, nombre, password, tipo', 'usuarios', "email= '$usuario_admin'");
         //print_r($row);
         if ($rows = $row->getSiguienteRegistro()) {
-            //print_r($rows);
-            $_SESSION['adm_Clave'] = $rows['id_usuario'];
-            $_SESSION['nombre'] = $rows['nombre'];
-            $post['adm_Clave'] = $rows['id_usuario'];
-            //$post['adm_Last_Login'] = date('Y/m/j G:i:s');
-
-            $_SESSION['usuario_admin'] = $_POST['usuario'];
-            $_SESSION['ingreso'] = time();
-
-            header("Location: index.php");
-
+            if (password_verify($pass,$rows['password'])) {
+                $_SESSION['tipo'] = $rows['tipo'];
+                if ($_SESSION['tipo'] == "0") {
+                    $_SESSION['admin_clave'] = $rows['id_usuario'];
+                    $_SESSION['nombre'] = $rows['nombre'];                
+                    $post['admin_clave'] = $rows['id_usuario'];
+                    //$post['adm_Last_Login'] = date('Y/m/j G:i:s');
+                    $_SESSION['usuario_admin'] = $_POST['usuario'];
+                    $_SESSION['ingreso'] = time();
+                
+                    header("Location: index.php");
+                } else {
+                    return "error";
+                }
+            } else {
+                return "error";
+            }            
         } else {
-            echo "Error: Usuario o contraseña incorrectos";
+            return "error";
         }
     }
 

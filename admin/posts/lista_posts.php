@@ -5,6 +5,7 @@
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <h2>Posts</h2>
+    <a href="addPost.php" class="btn btn-primary my-3 ">Agregar Post</a>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>

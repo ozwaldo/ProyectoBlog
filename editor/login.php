@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'clases/Login.php';
-if (isset($_SESSION['usuario_admin'])) {
+if (isset($_SESSION['usuario_editor']) && $_SESSION['tipo'] == "1") {
     header('Location: index.php');
 }
 ob_start();
@@ -37,7 +37,7 @@ ob_start();
                 <?php 
                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $login = new Login();
-                    // echo "login";
+                    //  echo "login";
                         $mensaje = $login->
                                 ingresar();
                     }
@@ -48,18 +48,18 @@ ob_start();
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="usuario" placeholder="usuario">
+                            <input type="text" class="form-control" name="usuario" placeholder="Email">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" name="password" placeholder="contraseña">
+                            <input type="password" class="form-control" name="password" placeholder="Contraseña">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Entrar" class="btn btn-primary btn-block">
                         </div>
-                    </form>
+                    </form>                    
                 </div>
                 <div class="alert alert-danger" role="alert" <?php  if (isset($mensaje)) { echo "hidden"; }   ?>hidden>Email o Contraseña incorrectos</div>
             </div>

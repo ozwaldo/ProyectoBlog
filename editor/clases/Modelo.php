@@ -32,8 +32,8 @@ class Modelo {
             $where = "where $where";
         }
         $sql = "INSERT INTO $tabla SET $campos" . $where;
-        echo $sql;
-        $res = mysqli_query(Conexion::con(),$sql);
+        //echo $sql;
+        $res = mysql_query($sql, Conexion::con());
         if ($res) {
             return true;
         }
