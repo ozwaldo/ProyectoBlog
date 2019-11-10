@@ -1,11 +1,19 @@
 <?php 
     session_start();
+
+    require_once '../clases/Login.php';
+    $login = new Login();
+    $login->verificarUsuario();
+
     DEFINE("USUARIOS","active");
+
+    
+
     require_once("../template-admin/header.php");
 ?>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <h2>Posts</h2>
+    <h2>Usuario</h2>
     <form action="../clases/registrarUsuario.php" method="post" class="mb-5">
         <div class="form-group">
             <label for="nombre">Nombre</label>

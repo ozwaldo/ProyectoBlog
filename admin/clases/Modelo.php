@@ -32,7 +32,7 @@ class Modelo {
             $where = "where $where";
         }
         $sql = "INSERT INTO $tabla SET $campos" . $where;
-        echo $sql;
+        //echo $sql;
         $res = mysqli_query(Conexion::con(),$sql);
         if ($res) {
             return true;
@@ -46,7 +46,7 @@ class Modelo {
         }
         $sql = "UPDATE $tabla SET $campos" . $where;
         //echo "where: ". $where;
-        //echo $sql;
+        echo $sql;
         $res = mysqli_query(Conexion::con(),$sql);
         if ($res) {
             return true;

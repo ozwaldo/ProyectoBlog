@@ -1,7 +1,7 @@
 <?php 
     
 
-    $_SERVER['DOCUMENT_ROOT'] = "/proyectoblog/";
+    $_SERVER['DOCUMENT_ROOT'] = "/proyectoblog/";        
     
     
 ?>

@@ -1,12 +1,13 @@
 <?php
-
 include 'Controlador.php';
 
 class Login {
 
     public function verificarUsuario() {
-        if (!isset($_SESSION['usuario_admin']) || $_SESSION['tipo'] != "0") {            
-            return "error";
+        
+        if (!isset($_SESSION['usuario_admin']) || $_SESSION['tipo'] != "0") {   
+            echo "<br> Regresando <br> ";         
+            header("Location: ../login.php");
         }
     }
 
@@ -19,6 +20,7 @@ class Login {
         //print_r($row);
         if ($rows = $row->getSiguienteRegistro()) {
             if (password_verify($pass,$rows['password'])) {
+                
                 $_SESSION['tipo'] = $rows['tipo'];
                 if ($_SESSION['tipo'] == "0") {
                     $_SESSION['admin_clave'] = $rows['id_usuario'];

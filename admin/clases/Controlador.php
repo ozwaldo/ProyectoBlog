@@ -52,7 +52,7 @@ class Controlador {
         $campo = $this->campos($post, ', ');
         //echo "id: " . $idTabla ."\n";
         //print_r($post); echo "\n";
-        $id = $post['$idTabla'];
+        $id = $post["$idTabla"];
         //echo "id: " . $id ."\n";
         if ($this->mysql->modificar($tabla, $campo, "$idTabla='$id'")) {
             return true;

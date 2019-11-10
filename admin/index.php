@@ -2,7 +2,7 @@
     session_start();
     require('clases/Login.php');
     DEFINE("ADMINISTRADOR","active");
-    if(!isset($_SESSION['usuario_admin'])|| $_SESSION['tipo'] != "0") {
+    if(!isset($_SESSION['usuario_admin']) || $_SESSION['tipo'] != "0") {
         header('Location: login.php');
     }
     

@@ -37,7 +37,7 @@ ob_start();
                 <?php 
                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $login = new Login();
-                    // echo "login";
+                        echo "login";
                         $mensaje = $login->
                                 ingresar();
                     }
